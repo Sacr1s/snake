@@ -10,7 +10,7 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            HorizontalLine line = new HorizontalLine();
+            HorizontalLine line = new HorizontalLine(5, 10, 8, '+');
             line.Drow();
 
             Console.ReadKey();
