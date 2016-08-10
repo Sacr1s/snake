@@ -10,8 +10,17 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            HorizontalLine line = new HorizontalLine(5, 10, 8, '+');
-            line.Drow();
+            Console.SetBufferSize(80, 25);
+
+            // Отрисовка рамки
+            HorizontalLine upline = new HorizontalLine(0, 78, 0, '+');
+            HorizontalLine downline = new HorizontalLine(0, 78, 24, '+');
+            VerticalLine leftline = new VerticalLine(0, 24, 0, '+');
+            VerticalLine rightline = new VerticalLine(0, 24, 78, '+');
+            upline.Drow();
+            downline.Drow();
+            leftline.Drow();
+            rightline.Drow();
 
             Console.ReadKey();
         }
